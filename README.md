@@ -134,9 +134,9 @@ curl -i http://localhost:8080/api/health
 
 ### 1. Render Service Configuration
 * **Service Type**: Web Service
-* **Runtime**: Java (or Docker / Native)
-* **Build Command**: `./mvnw clean package -DskipTests`
-* **Start Command**: `java -jar target/vms_backend-0.0.1-SNAPSHOT.jar`
+* **Runtime**: **`Docker`** (Render uses Docker for Java & Spring Boot apps)
+* **Root Directory**: `vms_backend` (if in a monorepo, otherwise leave blank)
+* **Build / Start Commands**: Left blank (automatically handled by the provided `Dockerfile`)
 
 ### 2. Environment Variables on Render Dashboard
 Add the following in the **Environment** tab:

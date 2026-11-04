@@ -1,0 +1,12 @@
+target/
+.git/
+.gitignore
+*.db
+*.sqlite
+*.log
+.DS_Store
+.idea/
+.vscode/
+.env*
+system.properties
+
