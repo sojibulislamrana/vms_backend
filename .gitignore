@@ -1,0 +1,31 @@
+# Compiled class files & build artifacts
+target/
+*.class
+
+# Log files
+*.log
+
+# Sensitive environment configuration & credentials
+.env
+.env.*
+!.env.example
+application-local.properties
+application-secret.properties
+
+# Local SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# macOS & OS artifacts
+.DS_Store
+Thumbs.db
+
+# IDE configuration
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+
