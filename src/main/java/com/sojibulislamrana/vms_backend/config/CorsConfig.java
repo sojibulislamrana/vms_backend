@@ -15,7 +15,7 @@ import java.util.Arrays;
 @Configuration
 public class CorsConfig implements WebMvcConfigurer {
 
-    @Value("${cors.allowed-origins:http://localhost:*,http://127.0.0.1:*,https://*.onrender.com,https://*.pages.dev,https://*.vercel.app}")
+    @Value("${cors.allowed-origins:http://localhost:*,http://127.0.0.1:*,https://*.netlify.app,https://*.onrender.com,https://*.pages.dev,https://*.vercel.app}")
     private String allowedOrigins;
 
     @Override
