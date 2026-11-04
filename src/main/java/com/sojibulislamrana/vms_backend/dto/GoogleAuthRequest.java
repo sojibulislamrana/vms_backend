@@ -53,3 +53,4 @@ public class GoogleAuthRequest {
         this.avatarUrl = avatarUrl;
     }
 }
+
