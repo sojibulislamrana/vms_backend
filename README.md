@@ -127,3 +127,24 @@ curl -i http://localhost:8080/api/v1/vehicles
 # 3. Check health
 curl -i http://localhost:8080/api/health
 ```
+
+---
+
+## ☁️ Deploying to Render
+
+### 1. Render Service Configuration
+* **Service Type**: Web Service
+* **Runtime**: Java (or Docker / Native)
+* **Build Command**: `./mvnw clean package -DskipTests`
+* **Start Command**: `java -jar target/vms_backend-0.0.1-SNAPSHOT.jar`
+
+### 2. Environment Variables on Render Dashboard
+Add the following in the **Environment** tab:
+| Key | Example Value | Description |
+| :--- | :--- | :--- |
+| `DB_URL` | `jdbc:postgresql://<host>:5432/<dbname>` | Render PostgreSQL JDBC URL |
+| `DB_USERNAME` | `<db_user>` | PostgreSQL database username |
+| `DB_PASSWORD` | `<db_password>` | PostgreSQL database password |
+| `DB_DRIVER` | `org.postgresql.Driver` | JDBC driver for PostgreSQL |
+| `CORS_ALLOWED_ORIGINS` | `https://vms-frontend.onrender.com` | Production Flutter Web origin |
+| `PORT` | `10000` | Port automatically assigned by Render |
